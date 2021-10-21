@@ -1,14 +1,11 @@
 import React, { FC } from 'react'
-import { Layout, Menu, Breadcrumb } from 'antd'
-import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
+import { Layout, Breadcrumb } from 'antd'
 
-import SideBar from "../components/organisms/SideBar"
+import SideBar from '../components/organisms/SideBar'
 
-const { Header, Content, Footer, Sider } = Layout
-const { SubMenu } = Menu
+const { Header, Content, Footer } = Layout
 
 const App: FC = () => {
-
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <SideBar />

@@ -1,66 +1,53 @@
 import React from 'react'
-import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
+import { GroupOutlined, HomeOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
 
 interface SubItem {
   key: string
   title: string
+  url: string
 }
 
 interface SideMenu {
   key: string
   title: string
   icon: unknown
+  url?: string
   subItem?: Array<SubItem>
 }
 
 export const menu: Array<SideMenu> = [
   {
     key: '1',
-    title: 'Option 1',
-    icon: <PieChartOutlined />
+    title: 'Home',
+    icon: <HomeOutlined />,
+    url: '/'
   },
   {
-    key: '2',
-    title: 'Option 2',
-    icon: <DesktopOutlined />
-  },
-  {
-    key: 'sub1',
-    title: 'User',
-    icon: <UserOutlined />,
+    key: 'location',
+    title: 'Location',
+    icon: <GroupOutlined />,
     subItem: [
       {
         key: '3',
-        title: 'Tom'
+        title: 'Province',
+        url: '/location/province'
       },
       {
         key: '4',
-        title: 'Bill'
+        title: 'District',
+        url: '/location/district'
       },
       {
         key: '5',
-        title: 'Alex'
+        title: 'Alex',
+        url: '/'
       }
     ]
   },
   {
-    key: 'sub2',
-    title: 'Team',
-    icon: <TeamOutlined />,
-    subItem: [
-      {
-        key: '6',
-        title: 'Team 1'
-      },
-      {
-        key: '8',
-        title: 'Team 2'
-      }
-    ]
+    key: '6',
+    title: 'Test',
+    icon: <HomeOutlined />,
+    url: '/test'
   },
-  {
-    key: '9',
-    title: 'Files',
-    icon: <FileOutlined />
-  }
 ]
